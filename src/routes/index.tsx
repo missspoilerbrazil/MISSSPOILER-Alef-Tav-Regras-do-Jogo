@@ -66,8 +66,7 @@ function Dust() {
       const dt = now - last;
       last = now;
       x!.clearRect(0, 0, w, h);
-      for (let i = 0; i < n; i++) {
-        const q = p[i];
+      for (const q of p) {
         if (!still) {
           q.y -= q.s * dt;
           q.x += Math.sin(now * 0.0003 + q.t) * 0.00006 * dt;

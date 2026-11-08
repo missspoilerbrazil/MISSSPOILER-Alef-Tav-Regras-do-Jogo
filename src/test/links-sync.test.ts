@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 // The GitHub Pages copy (docs/index.html) and the app page must point to the same external links.
 const hrefs = (text: string) =>
   [...text.matchAll(/href="((?:https?:|mailto:)[^"]+)"/g)]
-    .map((m) => m[1])
+    .map((m) => m[1] ?? "")
     .filter((h) => !h.includes("fonts.googleapis.com"))
     .sort();
 
