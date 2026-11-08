@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- `docs/` holds a self-contained static copy of the home page served by GitHub Pages (branch → `/docs`); whenever content or links in `src/routes/index.tsx` change, update `docs/index.html` the same way, because Pages cannot run the TanStack server build.
